@@ -6,7 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="wyglad.css" type="text/css" />
     <title>Document</title>
+
+
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>  
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="header_button.js"></script>
+
+
 </head>
+
+
+
+
+
 <body>
 
 
@@ -15,42 +27,61 @@
             <img src="img/Polmed1.png" width="138" height="69" alt="Brak logo" /> &nbsp&nbsp&nbsp&nbsp
 
             <button class="tablink" onclick="openCity('Start', this, '#19ca00')" id="defaultOpen">Start</button>
-            <button class="tablink" onclick="openCity('Paris', this, '#19ca00')">Paris</button>
-            <button class="tablink" onclick="openCity('Tokyo', this, '#19ca00')">Tokyo</button>
-            <button class="tablink" onclick="openCity('Oslo', this, '#19ca00')">Oslo</button> 
+            <button class="tablink" onclick="openCity('Kontakt', this, '#19ca00')">Kontakt</button>
+            <button class="tablink" onclick="openCity('O nas', this, '#19ca00')">O nas</button>
+            <button class="tablink" onclick="openCity('Zaloguj', this, '#19ca00')">Zaloguj</button> 
         </div>
-
         <h1>Twój wygodny pomocnik umawiania wizyt lekarskich</h1>
-
     </div> 
 
+
+
+
+
 <section>
-
-
-  
-  <button class="tablink" onclick="openCity('Start', this, 'red')" id="defaultOpen">Start</button>
-  <button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
-  <button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
-  <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button> 
-
-
-
   <div id="Start" class="tabcontent">
-    <h11>Start</h11>
-    <p>London is the capital city of England.</p>
+    <h11>Umów wizytę ze swoim lekarzem</h11> 
+    <br>
+
+    <p>
+      <div class="split left">
+        <div class="centered">
+          <img src="img_avatar2.png" alt="Avatar woman">
+          <br>
+          <button class="button">Lekarz rodzinny</button>
+          <br>
+          <p>Some text.</p>
+        </div>
+      </div>
+      
+      <div class="split right">
+        <div class="centered">
+          <img src="img_avatar.png" alt="Avatar man">
+          <br>
+          <button class="button">Lekarz pediatra</button>
+          <br>
+          <p>Some text here too.</p>
+        </div>
+      </div> 
+    </p>
+      
+
   </div>
+
   
-  <div id="Paris" class="tabcontent">
+  <div id="Kontakt" class="tabcontent">
     <h11>Paris</h11>
     <p>Paris is the capital of France.</p>
+
+
   </div>
   
-  <div id="Tokyo" class="tabcontent">
+  <div id="O nas" class="tabcontent">
     <h11>Tokyo</h11>
     <p>Tokyo is the capital of Japan.</p>
   </div>
   
-  <div id="Oslo" class="tabcontent">
+  <div id="Zaloguj" class="tabcontent">
     <h11>Oslo</h11>
     <p>Oslo is the capital of Norway.</p>
   </div>
@@ -78,10 +109,6 @@
 
 -->
 
-
-<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>  
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-<script src="header_button.js"></script>
 
 </body>
 </html>
