@@ -128,11 +128,17 @@ header img{
   background-color: #ddd;
   border: none;
   color: black;
-  padding: 10px 20px;
+  padding: 50px 100px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 16px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.button:hover{
+  background-color: #19ca00;
+  color: black;
 }
