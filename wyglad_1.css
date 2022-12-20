@@ -56,14 +56,14 @@ header img{
   .tabcontent {
     color: black;
     display: none;
-    padding: 100px;
+    padding: 150px;
     text-align: center;
   }
 
 
 /* Wygląd dla startu */
 
-  .tabcontent h11{
+  .tabcontent h1{
     color: black;
     font-size: 40px;
     text-align: center;
@@ -86,11 +86,11 @@ header img{
  /* Split the screen in half */
  .split {
   flex: auto;
-  height: 50%;
+  height: 600px;
   width: 50%;
   position: absolute;
   margin-top: 100px;
-  overflow-x: hidden;
+  overflow-x: auto;
   /*padding-top: 10%;*/
 }
 
@@ -108,7 +108,7 @@ header img{
 
 /* If you want the content centered horizontally and vertically */
 .centered {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -117,8 +117,9 @@ header img{
 
 /* Style the image inside the centered container, if needed */
 .centered img {
-  width: 150px;
-  border-radius: 50%;
+  padding-top: 20px;
+  width: 250px;
+  height: 400px;
 } 
 
 

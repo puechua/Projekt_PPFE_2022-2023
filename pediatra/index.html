@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Document</title>
+
+
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>  
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="header_button.js"></script>
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+    <div class="header">
+        <div>
+            <img src="../img/Polmed1.png" width="138" height="69" alt="Brak logo" /> &nbsp&nbsp&nbsp&nbsp
+
+            <button class="tablink" onclick="openCity('Start', this, '#19ca00')">Start</button>
+            <button class="tablink" onclick="openCity('Kontakt', this, '#19ca00')">Kontakt</button>
+            <button class="tablink" onclick="openCity('O nas', this, '#19ca00')">O nas</button>
+            <button class="tablink" onclick="openCity('Zaloguj', this, '#19ca00')">Zaloguj</button> 
+        </div>
+        <h1>Twój wygodny pomocnik umawiania wizyt lekarskich</h1>
+    </div> 
+
+
+
+
+
+<section>
+  <div id="Choose_pediatra">
+    <h2>Wybierz swojego specjaliste</h2> 
+    <br>
+
+    <p>
+        <div class="lefted">
+          <img src="../img/lekarz1.png" alt="Avatar pediatra">
+          <br>
+          <button class="button">Lekarz pediatra</button>
+          <br>
+          <!--<p>Some text.</p>-->
+        </div>
+      
+        <div class="lefted">
+          <img src="../img/lekarz2.jpg" alt="Avatar rodzinny">
+          <br>
+          <button class="button">Lekarz rodzinny</button>
+          <br>
+          <!--<p>Some text here too.</p> -->
+        </div>
+
+
+
+
+        
+    </p>
+  </div>
+      
+
+  
+  <div id="Kontakt" class="tabcontent">
+    <h11>Paris</h11>
+    <p>Paris is the capital of France.</p>
+  </div>
+  
+  <div id="O nas" class="tabcontent">
+    <h11>Tokyo</h11>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+  
+  <div id="Zaloguj" class="tabcontent">
+    <h11>Oslo</h11>
+    <p>Oslo is the capital of Norway.</p>
+  </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!--
+    <header>
+        <div>
+           miejsce na zaimportowanie logo
+            <img src="img/logo.png" width="150" height="75" alt="Brak logo" />
+        </div>
+
+
+        <h1>Polmed</h1>
+      </header>
+
+-->
+
+
+</body>
+</html>
