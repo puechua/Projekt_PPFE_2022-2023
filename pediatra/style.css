@@ -28,7 +28,7 @@ body{
     text-align: left;
     background: #4071ff;
     /*color: white;*/
-    font-size: 30px;
+    font-size: 20px;
   }
 
 header img{
@@ -168,7 +168,6 @@ header img{
 }
 
 fieldset{
-  
   height: 100px;
   width: 50px;
 }

@@ -146,7 +146,7 @@ header img{
 
 
 
-iframe{
+.googleMap iframe{
   width:100%;
   height:400px;
 }

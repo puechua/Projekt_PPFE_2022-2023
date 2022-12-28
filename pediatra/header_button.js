@@ -24,3 +24,4 @@ function openCity(cityName, elmnt, color) {
 
 
 
+
