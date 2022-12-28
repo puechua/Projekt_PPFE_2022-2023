@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="wyglad_1.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Document</title>
 
 
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>  
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 <script src="header_button.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
 
 
 </head>
@@ -40,7 +43,7 @@
 
 <section>
   <div id="Start" class="tabcontent">
-    <h1>Jakiego lekarza szukasz</h1> 
+    <h2>Jakiego lekarza szukasz</h2> 
     <br>
 
     <p>
@@ -48,7 +51,7 @@
         <div class="centered">
           <img src="img/lekarz1.png" alt="Avatar pediatra">
           <br>
-          <button class="button">Lekarz pediatra</button>
+          <button onclick="location.href='pediatra/index.html'" class="submit_button">Lekarz pediatra</button>
           <br>
           <!--<p>Some text.</p>-->
         </div>
@@ -58,7 +61,7 @@
         <div class="centered">
           <img src="img/lekarz2.jpg" alt="Avatar rodzinny">
           <br>
-          <button class="button">Lekarz rodzinny</button>
+          <button class="submit_button">Lekarz rodzinny</button>
           <br>
           <!--<p>Some text here too.</p> -->
         </div>
@@ -79,6 +82,10 @@
   <div id="O nas" class="tabcontent">
     <h11>O nas</h11>
     <p>Wlascicielem jest bla bla bla</p>
+    <div id="googleMap">Nasza lokalizacja</div>
+    <iframe src="https://www.google.pl/maps/place/Walt+Disney+World+Resort/@33.5917002,-99.8616037,4.56z/data=!4m9!1m2!2m1!1sdisneyland!3m5!1s0x88dd7ee634caa5f7:0xa71e391fd01cf1a0!8m2!3d28.3771857!4d-81.57074!15sCgpkaXNuZXlsYW5kWgwiCmRpc25leWxhbmSSAQ5hbXVzZW1lbnRfcGFya-ABAA"></iframe>
+    <br>
+    <a href="https://www.google.pl/maps/place/Walt+Disney+World+Resort/@33.5917002,-99.8616037,4.56z/data=!4m9!1m2!2m1!1sdisneyland!3m5!1s0x88dd7ee634caa5f7:0xa71e391fd01cf1a0!8m2!3d28.3771857!4d-81.57074!15sCgpkaXNuZXlsYW5kWgwiCmRpc25leWxhbmSSAQ5hbXVzZW1lbnRfcGFya-ABAA">View map</a>
   </div>
   
   <div id="Zaloguj" class="tabcontent">

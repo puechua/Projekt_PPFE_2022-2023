@@ -67,7 +67,7 @@ header img{
     color: black;
     font-size: 40px;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
   
 
@@ -89,7 +89,7 @@ header img{
   height: 600px;
   width: 50%;
   position: absolute;
-  margin-top: 100px;
+  margin-top: 60px;
   overflow-x: auto;
   /*padding-top: 10%;*/
 }
@@ -109,7 +109,7 @@ header img{
 /* If you want the content centered horizontally and vertically */
 .centered {
   position: relative;
-  top: 200px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -123,26 +123,9 @@ header img{
 } 
 
 
-.lefted {
-  position: relative;
-  top: 350px;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.lefted img{
-  padding-right: 20px;
-  width: 250px;
-  height: 400px;
-}
-
-
-
-
 
 /* Lekarze przyciski */
-.button {
+.submit_button {
   background-color: #ddd;
   border: none;
   color: black;
@@ -156,7 +139,15 @@ header img{
   font-size: 20px;
 }
 
-.button:hover{
+.submit_button:hover{
   background-color: #19ca00;
   color: black;
 }
+
+
+
+iframe{
+  width:100%;
+  height:400px;
+}
+
