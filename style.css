@@ -151,3 +151,7 @@ iframe{
   height:400px;
 }
 
+
+.tabcontent address{
+  text-align: left;
+}

@@ -137,6 +137,12 @@ header img{
   height: 400px;
 }
 
+.righted{
+  right: 20%;
+  transform: translate(50%, -50%);
+  text-align: center;
+}
+
 
 
 
@@ -159,4 +165,10 @@ header img{
 .button:hover{
   background-color: #19ca00;
   color: black;
+}
+
+fieldset{
+  
+  height: 100px;
+  width: 50px;
 }
