@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="wyglad_1.css" type="text/css" />
     <title>Document</title>
@@ -42,7 +43,9 @@
   <div id="Start" class="tabcontent">
     <h1>Jakiego lekarza szukasz</h1> 
     <br>
-
+    <!-- kalendarz -->
+    <h3>Proszę wybrać datę i godzinę wizyty</h3>
+	<input type="text" id="datetimepicker1"/>
     <p>
       <div class="split left">
         <div class="centered">
@@ -64,10 +67,12 @@
         </div>
       </div> 
     </p>
+    
+    
       
 
   </div>
-
+  
   
   <div id="Kontakt" class="tabcontent">
     <h11>Kontakt</h11>
@@ -111,4 +116,41 @@
 
 
 </body>
+
+<script src="./jquery.js"></script>
+<script src="./php-date-formatter.min.js"></script>
+<script src="jquery.datetimepicker.js"></script>
+<script>
+
+$.datetimepicker.setLocale('pl');
+
+$('#datetimepicker_format').datetimepicker({value:'2015/04/15 05:03', format: $("#datetimepicker_format_value").val()});
+console.log($('#datetimepicker_format').datetimepicker('getValue'));
+
+$("#datetimepicker_format_change").on("click", function(e){
+	$("#datetimepicker_format").data('xdsoft_datetimepicker').setOptions({format: $("#datetimepicker_format_value").val()});
+});
+$("#datetimepicker_format_locale").on("change", function(e){
+	$.datetimepicker.setLocale($(e.currentTarget).val());
+});
+
+$('.some_class').datetimepicker();
+
+$('#default_datetimepicker').datetimepicker({
+	formatTime:'H:i',
+	formatDate:'d.m.Y',
+	defaultDate:'+03.01.2023',
+	defaultTime:'10:00',
+	timepickerScrollbar:false
+});
+
+$('#datetimepicker1').datetimepicker({
+	onGenerate:function( ct ){
+		$(this).find('.xdsoft_date.xdsoft_weekend')
+			.addClass('xdsoft_disabled');
+	},
+	timepicker:true
+	
+});
+    </script>
 </html>
