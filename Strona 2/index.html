@@ -13,6 +13,9 @@
 <script src="header_button.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+<script src="./jquery.js"></script>
+<script src="./php-date-formatter.min.js"></script>
+<script src="jquery.datetimepicker.js"></script>
 </head>
 
 
@@ -39,7 +42,7 @@
 
 <section>
   <div id="Choose_pediatra">
-    <h2>Wybierz swojego specjaliste</h2> 
+    <h2>Wybierz swojego specjalistę</h2> 
     <br>
 
     <p>
@@ -50,15 +53,52 @@
           <button class="button">Antoni Markiewicz</button>
           <br>
         </div>
-
         <div class="lefted">
           <img src="../img/lekarz2.jpg" alt="Avatar rodzinny">
           <br>
           <button class="button">Anna Walc</button>
           <br>
         </div>
+        <div class="lefted">
+          <input type="text" id="datetimepicker1"/>
+        </div>
 
       </section>
 
     </body>
+
+    <!--Kalendarz -->
+    <script>
+
+      $.datetimepicker.setLocale('pl');
+      
+      $('#datetimepicker_format').datetimepicker({value:'2015/04/15 05:03', format: $("#datetimepicker_format_value").val()});
+      console.log($('#datetimepicker_format').datetimepicker('getValue'));
+      
+      $("#datetimepicker_format_change").on("click", function(e){
+        $("#datetimepicker_format").data('xdsoft_datetimepicker').setOptions({format: $("#datetimepicker_format_value").val()});
+      });
+      $("#datetimepicker_format_locale").on("change", function(e){
+        $.datetimepicker.setLocale($(e.currentTarget).val());
+      });
+      
+      $('.some_class').datetimepicker();
+      
+      $('#default_datetimepicker').datetimepicker({
+        formatTime:'H:i',
+        formatDate:'d.m.Y',
+        defaultDate:'+03.01.2023',
+        defaultTime:'10:00',
+        timepickerScrollbar:false
+      });
+      
+      $('#datetimepicker1').datetimepicker({
+        onGenerate:function( ct ){
+          $(this).find('.xdsoft_date.xdsoft_weekend')
+            .addClass('xdsoft_disabled');
+        },
+        timepicker:true
+        
+      });
+          </script>
     </html>
