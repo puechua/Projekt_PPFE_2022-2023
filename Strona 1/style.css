@@ -25,6 +25,16 @@
   header img{
       float: left;
   }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    }
   
   
   .tabcontent {
@@ -56,12 +66,14 @@
   
   .left {
     left: 0;
-    background-color: #668DFF;
+    background-color: #89b4f3;
+    margin-left: 10px;
   }
   
   .right {
     right: 0;
-    background-color: #799BFF;
+    background-color: #8cb5f2;
+    margin-right: 10px;
   }
   
   .centered {
@@ -122,10 +134,12 @@
     background-size: 200% 100%;
     background-position: -100%;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 28px;
     display: inline-block;
     padding: 5px;
-    margin: 20px;
+    float: right;
+    margin-right: 100px; 
+    margin: 36px;
     position: relative;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
