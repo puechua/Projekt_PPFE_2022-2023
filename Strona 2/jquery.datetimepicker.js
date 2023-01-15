@@ -494,7 +494,7 @@ var datetimepickerFactory = function ($) {
 		nextButton: true,
 		defaultSelect: true,
 
-		scrollMonth: true,
+		scrollMonth: false,
 		scrollTime: true,
 		scrollInput: true,
 
