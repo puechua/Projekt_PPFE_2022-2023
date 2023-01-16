@@ -588,13 +588,11 @@ var datetimepickerFactory = function ($) {
 		}
 	}
 
-	// for locale settings
 	$.datetimepicker = {
 		setLocale: function(locale){
 			var newLocale = default_options.i18n[locale] ? locale : globalLocaleDefault;
 			if (globalLocale !== newLocale) {
 				globalLocale = newLocale;
-				// reinit date formatter
 				initDateFormatter();
 			}
 		},
@@ -629,10 +627,8 @@ var datetimepickerFactory = function ($) {
 
 	$.extend($.datetimepicker, standardFormats);
 
-	// first init date formatter
 	initDateFormatter();
 
-	// fix for ie8
 	if (!window.getComputedStyle) {
 		window.getComputedStyle = function (el) {
 			this.el = el;
@@ -1236,7 +1232,6 @@ var datetimepickerFactory = function ($) {
 					return false;
 				});
 
-			//scroll_element = timepicker.find('.xdsoft_time_box');
 			timeboxparent.append(timebox);
 			timeboxparent.xdsoftScroller(options);
 
@@ -1529,11 +1524,6 @@ var datetimepickerFactory = function ($) {
 						var pheight = timeboxparent[0].clientHeight,
 							height = timebox[0].offsetHeight,
 							top = Math.abs(parseInt(timebox.css('marginTop'), 10));
-						/**
-						 *  Fixes a bug which happens if:
-						 *  top is < the timeHeightInTimePicker, it will cause the up arrow to stop working
-						 *  same for the down arrow if it's not exactly on the pixel
-						 */
 						if (top < options.timeHeightInTimePicker) {
 							top = options.timeHeightInTimePicker;
 						} else if ($this.hasClass(options.next) && (height - pheight) < top) {
@@ -1545,19 +1535,7 @@ var datetimepickerFactory = function ($) {
 						} else if ($this.hasClass(options.prev) && top - options.timeHeightInTimePicker >= 0) {
 							timebox.css('marginTop', '-' + (top - options.timeHeightInTimePicker) + 'px');
 						}
-						/**
-						 * Fixed bug:
-						 * When using css3 transition, it will cause a bug that you cannot scroll the timepicker list.
-						 * The reason is that the transition-duration time, if you set it to 0, all things fine, otherwise, this
-						 * would cause a bug when you use jquery.css method.
-						 * Let's say: * { transition: all .5s ease; }
-						 * jquery timebox.css('marginTop') will return the original value which is before you clicking the next/prev button,
-						 * meanwhile the timebox[0].style.marginTop will return the right value which is after you clicking the
-						 * next/prev button.
-						 *
-						 * What we should do:
-						 * Replace timebox.css('marginTop') with timebox[0].style.marginTop.
-						 */
+
 						timeboxparent.trigger('scroll_element.xdsoft_scroller', [Math.abs(parseInt(timebox[0].style.marginTop, 10) / (height - pheight))]);
 						period = (period > 10) ? 10 : period - 10;
 						if (!stop) {
@@ -1573,7 +1551,6 @@ var datetimepickerFactory = function ($) {
 				});
 
 			xchangeTimer = 0;
-			// base handler - generating a calendar and timepicker
 			datetimepicker
 				.on('xchange.xdsoft', function (event) {
 					clearTimeout(xchangeTimer);
@@ -1752,7 +1729,6 @@ var datetimepickerFactory = function ($) {
 						month_picker.find('.xdsoft_label span').eq(0).text(options.i18n[globalLocale].months[_xdsoft_datetime.currentTime.getMonth()]);
 						month_picker.find('.xdsoft_label span').eq(1).text(_xdsoft_datetime.currentTime.getFullYear() + options.yearOffset);
 
-						// generate timebox
 						time = '';
 						h = '';
 						m = '';
@@ -1882,7 +1858,7 @@ var datetimepickerFactory = function ($) {
 			timerclick = 0;
 			calendar
 				.on('touchend click.xdsoft', 'td', function (xdevent) {
-					xdevent.stopPropagation();  // Prevents closing of Pop-ups, Modals and Flyouts in Bootstrap
+					xdevent.stopPropagation();
 					timerclick += 1;
 					var $this = $(this),
 						currentTime = _xdsoft_datetime.currentTime;
@@ -2327,24 +2303,16 @@ var datetimepickerFactory = function ($) {
 						hasSel = pos !== selEnd,
 						digit;
 
-					    // only alow these characters
 					    if (((key >=  KEY0 && key <=  KEY9)  ||
 						 (key >= _KEY0 && key <= _KEY9)) ||
 						 (key === BACKSPACE || key === DEL)) {
-
-					      // get char to insert which is new character or placeholder ('_')
 					      digit = (key === BACKSPACE || key === DEL) ? '_' :
 							  String.fromCharCode((_KEY0 <= key && key <= _KEY9) ? key - KEY0 : key);
 
-						// we're deleting something, we're not at the start, and have normal cursor, move back one
-						// if we have a selection length, cursor actually sits behind deletable char, not in front
 						if (key === BACKSPACE && pos && !hasSel) {
 						    pos -= 1;
 						}
 
-						// don't stop on a separator, continue whatever direction you were going
-						//   value char - keep incrementing position while on separator char and we still have room
-						//   del char   - keep decrementing position while on separator char and we still have room
 						while (true) {
 						  var maskValueAtCurPos = options.mask.slice(pos, pos+1);
 						  var posShorterThanMaskLength = pos < options.mask.length;
@@ -2353,27 +2321,23 @@ var datetimepickerFactory = function ($) {
 						  var curPosOnSep = notNumberOrPlaceholder.test(maskValueAtCurPos);
 						  var continueMovingPosition = curPosOnSep && posShorterThanMaskLength && posGreaterThanZero
 
-						  // if we hit a real char, stay where we are
 						  if (!continueMovingPosition) break;
 
-						  // hitting backspace in a selection, you can possibly go back any further - go forward
 						  pos += (key === BACKSPACE && !hasSel) ? -1 : 1;
 
                         }
 
-                        if (event.metaKey) {    // cmd has been pressed
+                        if (event.metaKey) { 
                             pos = 0;
                             hasSel = true;
                         }
 
 						if (hasSel) {
-						  // pos might have moved so re-calc length
 						  var selLength = selEnd - pos
 
-						  // if we have a selection length we will wipe out entire selection and replace with default template for that range
 						  var defaultBlank = options.mask.replace(/[0-9]/g, '_');
 						  var defaultBlankSelectionReplacement = defaultBlank.slice(pos, pos+selLength);
-						  var selReplacementRemainder = defaultBlankSelectionReplacement.slice(1) // might be empty
+						  var selReplacementRemainder = defaultBlankSelectionReplacement.slice(1)
 
 						  var valueBeforeSel = val.slice(0, pos);
 						  var insertChars = digit + selReplacementRemainder;
@@ -2390,19 +2354,15 @@ var datetimepickerFactory = function ($) {
 						}
 
 						if (val.trim() === '') {
-						  // if empty, set to default
 						    val = defaultBlank
 						} else {
-						  // if at the last character don't need to do anything
 						    if (pos === options.mask.length) {
 							event.preventDefault();
 							return false;
 						    }
 						}
 
-						// resume cursor location
 						pos += (key === BACKSPACE) ? 0 : 1;
-						// don't stop on a separator, continue whatever direction you were going
 						while (/[^0-9_]/.test(options.mask.slice(pos, pos+1)) && pos < options.mask.length && pos > 0) {
 						    pos += (key === BACKSPACE) ? 0 : 1;
 						}
@@ -2572,13 +2532,10 @@ var datetimepickerFactory = function ($) {
 };
 ;(function (factory) {
 	if ( typeof define === 'function' && define.amd ) {
-		// AMD. Register as an anonymous module.
 		define(['jquery', 'jquery-mousewheel'], factory);
 	} else if (typeof exports === 'object') {
-		// Node/CommonJS style for Browserify
 		module.exports = factory(require('jquery'));;
 	} else {
-		// Browser globals
 		factory(jQuery);
 	}
 }(datetimepickerFactory));
