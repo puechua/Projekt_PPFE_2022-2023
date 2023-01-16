@@ -501,3 +501,19 @@
 	box-shadow: #8FAFE0 0 1px 3px 0 inset !important;
 	color: #fff !important;
 }
+
+
+
+#AM{
+	text-align: center;
+	position: relative;
+	font-size: 50px;
+}
+
+
+.column{
+	float: left;
+	width: 50%;
+	margin: 10px;
+}
+

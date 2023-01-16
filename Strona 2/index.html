@@ -16,6 +16,7 @@
 <script src="./jquery.js"></script>
 <script src="./php-date-formatter.min.js"></script>
 <script src="jquery.datetimepicker.js"></script>
+<script src="../Strona 2/Lekarz_choose.js"></script>
 </head>
 
 
@@ -43,22 +44,39 @@
 
     <p>
       <div class="Pediatra_kalendarz">
-        <div class="lefted">
-          <img src="../img/lekarz1.png" alt="Avatar pediatra">
-          <br>
-          <button class="button">Antoni Markiewicz</button>
-          <br>
+        <div class="row">
+          <div class="column">
+            <h2>Column1</h2>
+            <div class="lefted">
+              <img src="../img/lekarz1.png" alt="Avatar pediatra">
+              <br>
+              <button class="button" onclick="chooseAM()">Antoni Markiewicz</button>
+              <br>
+            </div>
+            <div class="lefted">
+              <img src="../img/lekarz2.jpg" alt="Avatar rodzinny">
+              <br>
+              <button class="button" onclick="chooseAW()">Anna Walc</button>
+              <div class="righted">
+                <p id="AW"></p>
+              </div>
+              <br>
+            </div>
+            <div class="lefted">
+              <input type="text" id="datetimepicker1"/>
+            </div>
+          </div>
+
+          <div class="column">
+            <h2>column2</h2>
+            <p id="AM"></p>
+          </div>
+
+
         </div>
-        <div class="lefted">
-          <img src="../img/lekarz2.jpg" alt="Avatar rodzinny">
-          <br>
-          <button class="button">Anna Walc</button>
-          <br>
-        </div>
-        <div class="lefted">
-          <input type="text" id="datetimepicker1"/>
-        </div>
+
       </div>
+
     </p>
   </div>
 </section>
