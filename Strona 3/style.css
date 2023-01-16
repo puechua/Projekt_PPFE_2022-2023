@@ -347,3 +347,15 @@
   cursor: pointer;
 }
 
+h3{
+  font-size: 15px;
+}
+
+.column img{
+  margin-left: 10%;
+}
+
+il{
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
