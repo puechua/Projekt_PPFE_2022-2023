@@ -7,6 +7,7 @@
   
   body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #89b4f3;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -38,14 +39,24 @@
   
   
   .tabcontent {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
-    padding: 150px;
+    padding: 5%;
     text-align: center;
   }
   
   
   /* Wygląd dla startu */
   
+  h1{
+    color: whitesmoke;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 3%;
+    font-size: 40px;
+    }
+
     h2{
       color: black;
       font-size: 40px;
@@ -58,10 +69,8 @@
    .split {
     flex: auto;
     height: 600px;
-    width: 50%;
-    position: absolute;
-    margin-top: 60px;
-    overflow-x: auto;
+    width: 20%;
+    position: right;
   }
   
   .left {
