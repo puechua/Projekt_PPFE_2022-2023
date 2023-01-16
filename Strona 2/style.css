@@ -141,6 +141,7 @@
 
 	.flex-container {
 		display: flex;
+		margin-bottom: 100px;
 	} 
 	
 	.flex-child:first-child {
@@ -151,7 +152,7 @@
 		flex: 1;
 		border: 2px;
 		position: relative;
-		top: 625px;
+		top: 525px;
 		left: 20%;
 		transform: translate(-50%, -50%);
 		text-align: center;
@@ -160,7 +161,8 @@
 	.flex-child-kalendarz{
 		flex: 1;
 		border: 2px;
-		margin-top: 100px;
+		margin-top: 50px;
+		text-align: center;
 	} 
 	
 	.flex-child:first-child {
@@ -173,7 +175,9 @@
 		height: 325px;
 	  }
 
-	  
+	  .flex-container button{
+		margin-bottom: 50px;
+	  }
 
 /** Kalendarz */
 
@@ -551,7 +555,13 @@
 #AM{
 	text-align: center;
 	position: relative;
-	font-size: 50px;
+	font-size: 40px;
+}
+
+#JS{
+	text-align: center;
+	position: relative;
+	font-size: 40px;
 }
 
 

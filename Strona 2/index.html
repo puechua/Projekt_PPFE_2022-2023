@@ -17,6 +17,12 @@
 <script src="./php-date-formatter.min.js"></script>
 <script src="jquery.datetimepicker.js"></script>
 <script src="../Strona 2/Lekarz_choose.js"></script>
+<script>  
+  function favTutorial() {  
+  var mylist = document.getElementById("droplist");  
+  document.getElementById("uwagi").value = mylist.options[mylist.selectedIndex].text;  
+  }  
+  </script>
 </head>
 
 
@@ -40,7 +46,6 @@
   <div id="Choose_pediatra">
     <h2>Wybierz swojego specjalistę</h2> 
     <br>
-    <button class="button-1" role="button">Button</button>
     <div class="flex-container">
       <div class="flex-child-lekarze">
             <div>
@@ -59,9 +64,23 @@
         <div class="flex-child-kalendarz">
           <p id="JS"></p>
           <p id="AM"></p>
-          <p  id="show_inline" style="display:none">
+          <div   id="show_inline" style="display:none">
+          <p>
             <input type="text" id="datetimepicker1"/>
+            <p>
+            <select id = "droplist" onchange = "favTutorial()" >  
+              <option> ---Proszę wybrać powód wizyty--- </option>  
+              <option> Szczepienie - 100 zł </option>  
+              <option> Wizyta kontrolna - 80 zł </option>  
+              <option> Choroba - bezpłatnie </option>  
+              <option> Konsultacja - 150 zł </option>  
+              <option> Wypisanie recepty - 50 zł </option> 
+              </select>  
+            </p>
+              <p> Uwagi dla lekarza:  </p> 
+              <input type = "text" id = "uwagi" size = "20" >
           </p>
+          </div>
         </div>
       </div>
   </div>
