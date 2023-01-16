@@ -14,12 +14,12 @@
   
   
   .header {
-      margin-top: 0px;
-      padding: 60px;
-      text-align: left;
-      background: #a3c2f5;
-      /*color: white;*/
-    }
+	margin-top: 0px;
+	padding: 60px;
+	text-align: left;
+	background: #a3c2f5;
+	font-size: 30px;
+  }
   
   header img{
       float: left;

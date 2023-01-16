@@ -14,13 +14,12 @@
   
   
   .header {
-      margin-top: 0px;
-      padding: 40px;
-      text-align: left;
-      background: #a3c2f5;
-      /*color: white;*/
-      font-size: 30px;
-    }
+    margin-top: 0px;
+    padding: 60px;
+    text-align: left;
+    background: #a3c2f5;
+    font-size: 30px;
+  }
   
 .logo{
   border-right: 40px;
@@ -30,7 +29,15 @@
       float: left;
   }
   
-  
+  h1{
+    color: whitesmoke;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 3%;
+    font-size: 40px;
+    }
+
   h2{
     color: black;
     font-size: 40px;
@@ -200,13 +207,16 @@
   
 /* formularz kontaktowy */
 
+.form{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-left: 50%;
+}
 
 .container{
   width: 85%;
   background: #fff;
   border-radius: 6px;
-  padding: 40px 60px 30px 40px;
-  box-shadow: 10px 10px 10px rgba(0.2, 0.2, 0.2, 0.2);
+  padding: 40px 60px 30px 350px;
 }
 .container .content{
   display: flex;
@@ -256,7 +266,7 @@
   margin-left: 75px;
 }
 .content .right-side .topic-text{
-  font-size: 23px;
+  font-size: 30px;
   font-weight: 600;
   color: #19ca00;
 }
@@ -274,7 +284,7 @@
   font-size: 16px;
   background: #F0F1F8;
   border-radius: 6px;
-  padding: 0 15px;
+  padding: 10px 15px;
   resize: none;
 }
 .right-side .message-box{
@@ -288,18 +298,19 @@
   margin-top: 12px;
 }
 .right-side .button_formularz input[type="button"]{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #fff;
-  font-size: 18px;
+  font-size: 24px;
   outline: none;
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
-  background: #3e2093;
+  background: #19ca00;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .button_formularz input[type="button"]:hover{
-  background: #5029bc;
+  background: #63ca56;
 }
 
 @media (max-width: 950px) {
