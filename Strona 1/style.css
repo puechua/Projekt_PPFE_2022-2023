@@ -153,17 +153,23 @@
   
   /* Lekarze przyciski */
   .submit_button {
-    background-color: #ddd;
-    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: whitesmoke;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
     color: black;
-    padding: 50px 100px;
+    padding: 10px 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 4px 2px;
+    margin: 0px 0px;
     cursor: pointer;
     border-radius: 8px;
     font-size: 20px;
+    font-weight: 500;
+    transition: color 100ms;
   }
   
   .submit_button:hover{
@@ -206,6 +212,7 @@
   }
   
   .przyciski:before{
+    
     content: '';
     background: #19ca00;
     display: block;
