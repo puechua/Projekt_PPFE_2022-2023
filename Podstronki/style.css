@@ -360,9 +360,8 @@
   margin: auto;
   margin: 20 0 0 450px;
   padding: 80px;
-  background: #F0F1F8;
+  background: whitesmoke;
   border-radius: 15px;
-  box-shadow: 10px 10px 10px rgba(0.2, 0.2, 0.2, 0.2);
 }
 
 #Uname{
