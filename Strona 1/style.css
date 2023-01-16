@@ -40,6 +40,14 @@
     section{
       height: 800px;
     }
+
+    #nfzlogo{
+      height: 100px;
+      display: inline;
+      float:inline-end;
+      margin: 1%;
+    }
+    
   
   
   .tabcontent {
@@ -99,8 +107,8 @@
 
   .centered img {
     padding-top: 20px;
-    width: 250px;
-    height: 400px;
+    width: 325px;
+    height: 300px;
   } 
 
   
