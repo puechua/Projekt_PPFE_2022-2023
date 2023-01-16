@@ -52,16 +52,16 @@
             <div>
               <img src="../img/lekarz3.png" alt="Avatar rodzinny">
               <br>
-              <button class="button" onclick="chooseJS()">Jan Sinowski</button>
-              <div>
-                <p id="JS"></p>
-              </div>
+              <button class="button" href="javascript:void(0)" onclick="var si = document.getElementById('show_inline').style; si.display = (si.display=='none')?'block':'none';return false, chooseJS()">Jan Sinowski</button>
               <br>
             </div>
         </div>
-        <div class="flex-child-kalendarz" id="show_inline" style="display:none">
-          <input type="text" id="datetimepicker1"/>
+        <div class="flex-child-kalendarz">
+          <p id="JS"></p>
           <p id="AM"></p>
+          <p  id="show_inline" style="display:none">
+            <input type="text" id="datetimepicker1"/>
+          </p>
         </div>
       </div>
   </div>

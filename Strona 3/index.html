@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Document</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -21,19 +25,46 @@
     </div> 
 
     <section>
-        <div class="flex-container">
-            Potwierdzenie wizyty
-        </div>
-            <div id="potwierdzenie">
-                <div id="zdj_po_lewej">
-                    <img src="../img/lekarz1.png" alt="Avatar pediatra">
-                </div>
-              <p>
-                aslkdbakjsdbkjasbd
-              </p>
-              <br>
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Column1</h2>
+                <img src="../img/lekarz1.png" alt="Avatar pediatra">
             </div>
-  </section>
+
+
+            <div class="column" style="background-color:#bbb;">
+                <h2>Column 2</h2>
+                <p>laksdas</p>
+                <ul>
+                    <il>Lekarz: </il><br>
+                    <il>Data: </il><br>
+                    <il>Powód wizyty: </il><br>
+                </ul>
+
+
+
+
+
+                <button class="cancel_button" id="myBtn">Odwołaj wizytę</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Wizyta została odwołana.</p>
+                 </div>
+                </div>
+
+                <button class="submit_button" id="myBtn2">Potwierdź wizytę</button>
+                <div id="myModal2" class="modal2">
+                    <div class="modal-content2">
+                        <span class="close2">&times;</span>
+                        <p>Wizyta została potwierdzona.</p>
+                 </div>
+                </div>
+                
+
+</div>
+        </div>
+</section>
 
 
     <footer>
@@ -41,7 +72,7 @@
           <a href="https://www.nfz.gov.pl/"><img id="nfzlogo" src="../img/nfz.png" alt="NFZ"></a>
           <a href="https://pacjent.gov.pl/"><img id="nfzlogo" src="../img/inkonpac.png" alt="Pacjent gov"></a>
           <a href="https://mech.pk.edu.pl/"><img id="nfzlogo" src="../img/wmpk.png" alt="WM PK"></a>
-          <p>Wlascicielem jest bla bla bla</p>
+          <h3>Wlascicielem jest bla bla bla</h3>
           <address>
             Polmed Sp. z o.o.<br>
             NIP 633 333 66 33<br>
@@ -52,6 +83,8 @@
       
       </footer>
 
+<script src="./cancel_modal.js"></script>
+<script src="./submit_modal.js"></script>
     
 </body>
 </html>
