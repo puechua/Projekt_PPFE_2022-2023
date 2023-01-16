@@ -194,6 +194,10 @@
   }
 
 
+
+
+
+  
 /* formularz kontaktowy */
 
 
@@ -330,4 +334,59 @@
    width: 100%;
    margin-left: 0;
  }
+}
+
+
+
+
+/* zaloguj */
+
+.login{
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+  margin: 20 0 0 450px;
+  padding: 80px;
+  background: #F0F1F8;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px rgba(0.2, 0.2, 0.2, 0.2);
+}
+
+#Uname{
+  font-size: 20px;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+}
+
+#Pass{
+  font-size: 20px;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+}
+
+#log{
+  margin: 5%;
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+  background-color: #19ca00;
+}
+
+span{
+  color: blue;
+  font-size: 17px;
+}
+
+
+
+b{
+  font-size: 20px;
 }

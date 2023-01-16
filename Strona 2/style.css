@@ -93,10 +93,12 @@
     background-size: 200% 100%;
     background-position: -100%;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 28px;
     display: inline-block;
     padding: 5px;
-    margin: 20px;
+    float: right;
+    margin-right: 100px; 
+    margin: 36px;
     position: relative;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -533,3 +535,19 @@
 	box-shadow: #8FAFE0 0 1px 3px 0 inset !important;
 	color: #fff !important;
 }
+
+
+
+#AM{
+	text-align: center;
+	position: relative;
+	font-size: 50px;
+}
+
+
+.column{
+	float: left;
+	width: 50%;
+	margin: 10px;
+}
+
