@@ -141,6 +141,7 @@
 
 	.flex-container {
 		display: flex;
+		margin-bottom: 100px;
 	} 
 	
 	.flex-child:first-child {
@@ -148,19 +149,20 @@
 	}
 
 	.flex-child-lekarze{
-		flex: 1;
+		flex: 0.4;
 		border: 2px;
 		position: relative;
-		top: 625px;
+		top: 525px;
 		left: 20%;
 		transform: translate(-50%, -50%);
 		text-align: center;
 	}  
 
 	.flex-child-kalendarz{
-		flex: 1;
+		flex: 0.4;
 		border: 2px;
-		margin-top: 100px;
+		margin-top: 50px;
+		text-align: center;
 	} 
 	
 	.flex-child:first-child {
@@ -170,10 +172,21 @@
 	.flex-container img{
 		padding-right: 20px;
 		width: 325px;
-		height: 325px;
+		height: 350px;
 	  }
 
-	  
+	  .flex-container button{
+		margin-bottom: 50px;
+	  }
+
+	.flex-child-wybor {
+		margin-top: 60px;
+		flex:0.4;
+		border: 2px;
+		margin-top: 50px;
+		text-align: center;
+		margin-right: 30px;
+	}
 
 /** Kalendarz */
 
@@ -194,7 +207,6 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	display: none;
-	margin-left: 33%;
 }
 .xdsoft_datetimepicker.xdsoft_rtl {
 	padding: 8px 0 8px 8px;
@@ -551,7 +563,13 @@
 #AM{
 	text-align: center;
 	position: relative;
-	font-size: 50px;
+	font-size: 40px;
+}
+
+#JS{
+	text-align: center;
+	position: relative;
+	font-size: 40px;
 }
 
 
