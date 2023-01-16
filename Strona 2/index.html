@@ -20,7 +20,7 @@
 <script>  
   function favTutorial() {  
   var mylist = document.getElementById("droplist");  
-  document.getElementById("uwagi").value = mylist.options[mylist.selectedIndex].text;  
+  document.getElementById("dropped").value = mylist.options[mylist.selectedIndex].text;  
   }  
   </script>
 </head>
@@ -65,9 +65,12 @@
           <p id="JS"></p>
           <p id="AM"></p>
           <div   id="show_inline" style="display:none">
-          <p>
             <input type="text" id="datetimepicker1"/>
-            <p>
+            
+          </div>
+        </div>
+        <div class="flex-child-wybor">
+          <p>
             <select id = "droplist" onchange = "favTutorial()" >  
               <option> ---Proszę wybrać powód wizyty--- </option>  
               <option> Szczepienie - 100 zł </option>  
@@ -76,14 +79,12 @@
               <option> Konsultacja - 150 zł </option>  
               <option> Wypisanie recepty - 50 zł </option> 
               </select>  
-            </p>
-              <p> Uwagi dla lekarza:  </p> 
-              <input type = "text" id = "uwagi" size = "20" >
           </p>
-          </div>
-        </div>
+              <p> Uwagi dla lekarza:  </p> 
+              <input type = "text" id="uwagi" size = "20" >
       </div>
-  </div>
+    </div>
+    </div>
 </section>
 
     <!--Kalendarz -->
