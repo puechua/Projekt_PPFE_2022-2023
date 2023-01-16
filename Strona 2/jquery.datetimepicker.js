@@ -451,19 +451,19 @@ var datetimepickerFactory = function ($) {
 
 		timepicker: true,
 		datepicker: true,
-		weeks: true,
+		weeks: false,
 
 		defaultTime: '10:00',	
 		defaultDate: false,	
 
 		minDate: false,
 		maxDate: false,
-		minTime: '10:00',
-		maxTime: '19:00',
+		minTime: '13:00',
+		maxTime: '17:00',
 		minDateTime: false,
 		maxDateTime: false,
 
-		allowTimes: [],
+		allowTimes: ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"],
 		opened: false,
 		initTime: true,
 		inline: false,
