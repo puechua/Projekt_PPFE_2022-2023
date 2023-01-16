@@ -132,6 +132,40 @@
       text-align: center;
     }
 
+
+	.flex-container {
+		display: flex;
+	}
+	
+	.flex-child-kalendarz{
+		flex: 1;
+		border: 2px;
+	}  
+	
+	.flex-child:first-child {
+		margin-right: 20px;
+	}
+
+	.flex-child-lekarze{
+		flex: 1;
+		border: 2px;
+		position: relative;
+		top: 450px;
+		left: 20%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}  
+	
+	.flex-child:first-child {
+		margin-right: 20px;
+	}
+	  
+	.flex-container img{
+		padding-right: 20px;
+		width: 250px;
+		height: 400px;
+	  }
+
 /** Kalendarz */
 
 .xdsoft_datetimepicker {
@@ -387,7 +421,7 @@
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select.xdsoft_yearselect{ right: 2px }
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover {
 	color: #fff;
-	background: #FFFFFF;
+	background: #8DDA81;
 }
 
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option {
@@ -396,8 +430,8 @@
 }
 
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
-	background: #33aaff;
-	box-shadow: #178fe5 0 1px 3px 0 inset;
+	background: #A3C2F5;
+	box-shadow: #8FAFE0 0 1px 3px 0 inset;
 	color: #fff;
 	font-weight: 700;
 }
