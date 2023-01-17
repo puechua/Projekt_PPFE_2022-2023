@@ -10,6 +10,7 @@
     margin: 0;
     width: 100%;
     height: 100%;
+	background-color: #89b4f3;
   }
   
   
@@ -35,7 +36,7 @@
   }
   
     h2{
-      color: black;
+      color: whitesmoke;
       font-size: 40px;
       text-align: center;
       margin-bottom: 100px;
@@ -68,7 +69,7 @@
     background-color: #ddd;
     border: none;
     color: black;
-    padding: 50px 100px;
+    padding: 25px 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -82,6 +83,8 @@
     background-color: #19ca00;
     color: black;
   }
+
+  
   
   fieldset{
     
@@ -149,20 +152,20 @@
 	}
 
 	.flex-child-lekarze{
-		flex: 0.4;
+		flex: 1;
 		border: 2px;
 		position: relative;
-		top: 525px;
+		top: 425px;
 		left: 20%;
 		transform: translate(-50%, -50%);
 		text-align: center;
 	}  
 
 	.flex-child-kalendarz{
-		flex: 0.4;
-		border: 2px;
-		margin-top: 50px;
+		flex: 1;
+		margin-top: 10px;
 		text-align: center;
+		margin-right: 10%;
 	} 
 	
 	.flex-child:first-child {
@@ -175,17 +178,13 @@
 		height: 350px;
 	  }
 
-	  .flex-container button{
-		margin-bottom: 50px;
-	  }
 
-	.flex-child-wybor {
-		margin-top: 60px;
-		flex:0.4;
-		border: 2px;
-		margin-top: 50px;
-		text-align: center;
-		margin-right: 30px;
+	.button-kal{
+		padding: 10px 10px;
+		margin-bottom: 20px;
+		border: 0px;
+		border-radius: 5px;
+		background-color: #ddd;
 	}
 
 /** Kalendarz */
@@ -637,4 +636,47 @@
   
   .button-1:disabled {
 	cursor: auto;
+  }
+
+
+
+  .submit_button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: whitesmoke;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: black;
+    padding: 10px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 0px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 100ms;
+	margin-top: 5%;
+  }
+  
+  .submit_button:hover{
+    background-color: #19ca00;
+    color: black;
+  }
+
+
+  footer {
+    background-color: #a3c2f5;
+    padding: 3rem;
+    position: static;
+    height: fit-content;
+    }
+	
+  #nfzlogo{
+	height: 100px;
+	display: inline;
+	float:inline-end;
+	margin: 1%;
   }

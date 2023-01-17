@@ -20,7 +20,8 @@
 <script>  
   function favTutorial() {  
   var mylist = document.getElementById("droplist");  
-  document.getElementById("dropped").value = mylist.options[mylist.selectedIndex].text;  
+  // document.getElementById("dropped").value = mylist.options[mylist.selectedIndex].text;
+  console.log(document.getElementById("dropped"))
   }  
   </script>
 </head>
@@ -51,41 +52,60 @@
             <div>
               <img src="../img/lekarz1.png" alt="Avatar pediatra">
               <br>
-              <button class="button" href="javascript:void(0)" onclick="var si = document.getElementById('show_inline').style; si.display = (si.display=='none')?'block':'none';return false, chooseAM()">Antoni Markiewicz</button>
+              <button class="button" onclick="chooseAM()">Antoni Markiewicz</button>
               <br>
             </div>
             <div>
               <img src="../img/lekarz3.png" alt="Avatar rodzinny">
               <br>
-              <button class="button" href="javascript:void(0)" onclick="var si = document.getElementById('show_inline').style; si.display = (si.display=='none')?'block':'none';return false, chooseJS()">Jan Sinowski</button>
+              <button class="button"  onclick="chooseJS()">Jan Sinowski</button>
               <br>
             </div>
         </div>
         <div class="flex-child-kalendarz">
-          <p id="JS"></p>
-          <p id="AM"></p>
+          <p id="AM">
+            <p>
+              <select id = "droplist" onchange = "favTutorial()" >  
+                <option> ---Proszę wybrać powód wizyty--- </option>  
+                <option> Szczepienie - 100 zł </option>  
+                <option> Wizyta kontrolna - 80 zł </option>  
+                <option> Choroba - bezpłatnie </option>  
+                <option> Konsultacja - 150 zł </option>  
+                <option> Wypisanie recepty - 50 zł </option> 
+                </select>  
+            </p>
+                <p> Uwagi dla lekarza:  </p> 
+                <input type = "text" id="uwagi" size = "20" >
+          </p>
+          <button class="button-kal" href="javascript:void(0)" onclick="var si = document.getElementById('show_inline').style; si.display = (si.display=='none')?'block':'none';return false">Proszę wybrać datę wizyty</button>
           <div   id="show_inline" style="display:none">
             <input type="text" id="datetimepicker1"/>
-            
+            <br>
+            <button onclick="location.href='../Strona 3/index.html'" class="submit_button">Potwierdź</button>
           </div>
         </div>
-        <div class="flex-child-wybor">
-          <p>
-            <select id = "droplist" onchange = "favTutorial()" >  
-              <option> ---Proszę wybrać powód wizyty--- </option>  
-              <option> Szczepienie - 100 zł </option>  
-              <option> Wizyta kontrolna - 80 zł </option>  
-              <option> Choroba - bezpłatnie </option>  
-              <option> Konsultacja - 150 zł </option>  
-              <option> Wypisanie recepty - 50 zł </option> 
-              </select>  
-          </p>
-              <p> Uwagi dla lekarza:  </p> 
-              <input type = "text" id="uwagi" size = "20" >
-      </div>
     </div>
     </div>
 </section>
+
+
+
+
+<footer>
+  <div class="footer" id="onas_footer">
+    <a href="https://www.nfz.gov.pl/"><img id="nfzlogo" src="../img/nfz.png" alt="NFZ"></a>
+    <a href="https://pacjent.gov.pl/"><img id="nfzlogo" src="../img/inkonpac.png" alt="Pacjent gov"></a>
+    <a href="https://mech.pk.edu.pl/"><img id="nfzlogo" src="../img/wmpk.png" alt="WM PK"></a>
+    <p>Wlascicielem jest Polmed Sp. z o.o. z siedzibą w Krakowie</p>
+    <address>
+      Polmed Sp. z o.o.<br>
+      NIP 633 333 66 33<br>
+      REGON 123456789<br>
+      Krakow, ul.Szpitalna 15, 30-222<br>
+    </address>
+  </div>
+
+</footer>
 
     <!--Kalendarz -->
     <script>
@@ -122,6 +142,7 @@
         
       });
       </script>
+
 
 
 </body>

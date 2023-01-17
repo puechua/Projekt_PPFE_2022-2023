@@ -3,6 +3,6 @@ function chooseAM() {
 }
 
 function chooseJS() {
-    document.getElementById("JS").innerHTML = "Jan Sinowski";
+    document.getElementById("AM").innerHTML = "Jan Sinowski";
     
 }
