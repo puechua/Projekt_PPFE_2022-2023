@@ -6,6 +6,8 @@
   
   
   body{
+    background-color: whitesmoke;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -214,7 +216,7 @@
 
 .container{
   width: 85%;
-  background: #fff;
+  background: whitesmoke;
   border-radius: 6px;
   padding: 40px 60px 30px 350px;
 }
@@ -357,10 +359,9 @@
   overflow: hidden;
   margin: auto;
   margin: 20 0 0 450px;
-  padding: 80px;
-  background: #F0F1F8;
+  padding: 0px;
+  background: whitesmoke;
   border-radius: 15px;
-  box-shadow: 10px 10px 10px rgba(0.2, 0.2, 0.2, 0.2);
 }
 
 #Uname{
@@ -401,3 +402,22 @@ span{
 b{
   font-size: 20px;
 }
+
+footer {
+  background-color: #a3c2f5;
+  padding: 3rem;
+  position: static;
+  height: fit-content;
+  }
+
+  section{
+    height: 800px;
+  }
+
+  #nfzlogo{
+    height: 100px;
+    display: inline;
+    float:inline-end;
+    margin: 1%;
+  }
+  
