@@ -70,7 +70,7 @@
     }
 
     h2{
-      color: black;
+      color: whitesmoke;
       font-size: 40px;
       text-align: center;
       margin-bottom: 80px;
@@ -169,7 +169,7 @@
   }
   
   .cancel_button {
-    background-color: #ddd;
+    background-color: #CB5C6A;
     border: none;
     color: black;
     padding: 20px 50px;
@@ -189,7 +189,7 @@
   }
 
   .cancel_button:hover{
-    background-color: #CB5C6A;
+    background-color: #cd2f44fb;
     color: black;
   }
   
@@ -356,6 +356,18 @@ h3{
 }
 
 il{
-  margin-top: 10%;
-  margin-bottom: 10%;
+margin-top: 50%;
+color: whitesmoke;
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+#wizytainfo {
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 10%;
 }
